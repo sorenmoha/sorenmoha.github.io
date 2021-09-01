@@ -1,1 +1,0 @@
-# sorenmoha.github.io
