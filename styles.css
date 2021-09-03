@@ -5,8 +5,30 @@
     margin: 0;
     padding: 0;
     background-color: #24252A;
-    
-} 
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #585858;
+    border-radius: 20px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
 li, a, button {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
@@ -20,21 +42,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-
+    border-bottom: 4px solid rgba(0, 136, 169, 0.8);
 }
 
 
 
-#hero {
-    width: 100%;
-    height: 100vh;
-    background-image: url(images/bg1.jpg );
-    background-size: cover ;
-    background-position: center;   
-    position: relative;
-
-
-}
 
 .logo {
     cursor: pointer;
@@ -43,7 +55,6 @@ header {
 
 .nav__links {
     list-style-type: none;
-
 }
 
 .nav__links li {
@@ -53,7 +64,7 @@ header {
 
 .nav__links li a {
     transition: all 0.3s ease 0s;
-
+    font-size: 18px;
 }
 
 .nav__links li a:hover {
@@ -67,11 +78,40 @@ button {
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease 0s;
+    font-size: 18px;
 
 }
 
 button:hover {
     background-color: rgba(0, 136, 169, 0.8);
+}
+
+.video__overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+    
+}
+
+
+.text__overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Montserrat;
+    font-size: 20px;
+    text-shadow: 7px 12px 8px #000000;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 10px;
+}
+
+.stroke {
+    color: white;
+    text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+
 }
 
 section {
@@ -94,6 +134,14 @@ section ul li {
     letter-spacing: 1px;
     cursor: pointer;
     color: black;
+}
+
+h2 {
+    min-width: 1200px;
+    background-color: rgba(0, 0, 0, 0);
+    
+
+
 }
 
 section ul li.active {
@@ -157,8 +205,6 @@ section ul li.active {
     
 }
 
-
-
 .image__overlay {
     position: absolute;
     top: 0;
@@ -185,4 +231,12 @@ section ul li.active {
     
 }
 
+#bg__video {
+    position: relative;
+    right: 0;
+    top: 0;
+    min-width: 100%;
+    min-height: 100%;
 
+
+}
