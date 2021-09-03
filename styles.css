@@ -43,6 +43,7 @@ li, a, button {
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
+    z-index: 3;
 }
 
 header {
@@ -54,15 +55,29 @@ header {
 }
 
 
-
-
 .logo {
-    cursor: pointer;
-        
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    padding: 1px;
+    
+}
+.logo__pic {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0);
+   
+    
 }
 
 .nav__links {
     list-style-type: none;
+    z-index: 3;
 }
 
 .nav__links li {
@@ -142,6 +157,7 @@ section ul li {
     letter-spacing: 1px;
     cursor: pointer;
     color: black;
+    
 }
 
 h2 {
