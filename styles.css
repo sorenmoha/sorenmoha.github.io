@@ -56,7 +56,7 @@ header {
 
 
 .logo {
-    left: 44%;
+    
     display: flex;
     z-index: 2;
     position: absolute;
