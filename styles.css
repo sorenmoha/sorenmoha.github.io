@@ -7,8 +7,16 @@
     background-color: #24252A;
 }
 
+html{
+    
+  
+  }
 
-
+ body{
+  
+  font-family: 'Anonymous Pro', monospace;  
+  
+ }
 
 ::-webkit-scrollbar {
     width: 20px;
@@ -110,6 +118,7 @@ button:hover {
 .stroke {
     color: white;
     text-shadow: -1.5px -1.5px 0 #000, 1.5px -1.5px 0 #000, -1.5px 1.5px 0 #000, 1.5px 1.5px 0 #000;
+    
 
 }
 
@@ -194,6 +203,39 @@ section ul li.active {
 .image__img{
     display: block;
     width: 100%;
+}
+
+.line-1{
+    position: relative;
+    top: 35%;  
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+    background:rgba(0, 0, 0, 0.623);
+    vertical-align: middle;
+    line-height: 50px; 
+    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 4s steps(44) 2s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+             
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 25em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
 
 .text {
