@@ -28,7 +28,7 @@
         <!--gallery start here-->
 
         <div class="product">
-            <a href="#">
+            <a href="https://www.shorturl.at/azUW2">
                 <div class="itemBox Cars zoom">
                     <img class="image__img" src="images\car1.jpg">
                         <div class="image__box">
@@ -41,7 +41,7 @@
                 </div>
             </a>
 
-            <a href="#">
+            <a href="https://www.shorturl.at/cgsuK">
                 <div class="itemBox Cars zoom">
                     <img class="image__img" src="images\car3.jpg">
                         <div class="image__overlay">
@@ -52,7 +52,7 @@
                 </div>
             </a>
 
-            <a href="#">
+            <a href="https://www.shorturl.at/cACIN">
                 <div class="itemBox Cars zoom">
                     <img class="image__img" src="images\car4.jpg">
                         <div class="image__overlay">
@@ -74,8 +74,8 @@
                 </div>
             </a>
 
-            <a href="#">
-                <div class="itemBox Action zoom">
+            <a href="https://www.shorturl.at/svDT1">
+                <div class="itembox__vertical Action zoom">
                     <img class="image__img" src="images\action1.jpg">
                         <div class="image__overlay">
                             <div class="text">
@@ -84,8 +84,28 @@
                         </div>
                 </div>
             </a>
+            <a href="https://www.shorturl.at/npwQT">
+                <div class="itembox__vertical Nature zoom">
+                    <img class="image__img" src="images\nature2.jpg">
+                        <div class="image__overlay">
+                         <div class="text">
+                                    Uncompressed Download
+                                </div>
+                        </div>
+                </div>
+            </a>
+            <a href="shorturl.at/chuF4">
+                <div class="itembox__vertical Cars zoom">
+                    <img class="image__img" src="images\car6.jpg">
+                        <div class="image__overlay">
+                         <div class="text">
+                                    Uncompressed Download
+                                </div>
+                        </div>
+                </div>
+            </a>
 
-            <a href="#">
+            <a href="https://www.shorturl.at/bfoFP">
                 <div class="itemBox Action zoom">
                     <img class="image__img" src="images\action2.jpg">
                         <div class="image__overlay">
@@ -96,7 +116,7 @@
                 </div>
             </a>
 
-            <a href="#">
+            <a href="https://www.shorturl.at/aLWZ8">
                 <div class="itemBox Nature zoom">
                     <img class="image__img" src="images\nature1.jpg">
                         <div class="image__overlay">
@@ -107,7 +127,7 @@
                 </div>
             </a>
 
-            <a href="#">
+            <a href="https://www.shorturl.at/guwEZ">
                 <div class="itemBox Action zoom">
                     <img class="image__img" src="images\action3.jpg">
                         <div class="image__overlay">
@@ -118,16 +138,7 @@
                 </div>
 
             </a>
-            <a href="#">
-                <div class="itemBox Nature zoom">
-                    <img class="image__img" src="images\nature2.jpg">
-                        <div class="image__overlay">
-                         <div class="text">
-                                    Uncompressed Download
-                                </div>
-                        </div>
-                </div>
-            </a>
+            
         </div>
 
     </section>
@@ -140,11 +151,11 @@
             $('.list').click(function(){
                 const value = $(this).attr('data-filter');
                     if (value == 'All'){
-                        $('.itemBox').show('1000');
+                        $('.itemBox, .itemBox__vertical').show('1000');
                     }
                     else{
-                        $('.itemBox').not('.'+value).hide('1000');
-                        $('.itemBox').filter('.'+value).show('1000');
+                        $('.itemBox, .itemBox__vertical').not('.'+value).hide('1000');
+                        $('.itemBox, .itemBox__vertical').filter('.'+value).show('1000');
                     }
             })
             //moving the active class to the selected item

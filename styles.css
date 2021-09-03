@@ -124,6 +124,14 @@ section ul li.active {
     
 }
 
+.itembox__vertical {
+    position: relative;
+    width: 396.5px;
+    height: 596px;
+    margin: 5px;
+
+}
+
 
 .image{
     position: relative;
