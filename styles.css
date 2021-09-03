@@ -246,7 +246,7 @@ section ul li.active {
 }
 @keyframes typewriter{
   from{width: 0;}
-  to{width: 25em;}
+  to{width: 27em;}
 }
 @keyframes blinkTextCursor{
   from{border-right-color: rgba(255,255,255,.75);}
