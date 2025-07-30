@@ -1,22 +1,27 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>  
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My Photos!</title>
+    <title>My Photos - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="gallery-page">
     <header>
         <nav>
             <ul class="nav__links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="pictures.html">Pictures</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#about">About</a></li>
             </ul>
         </nav>
-            <a class="cta" href="#"><button>Contact</button></a>
+        <a class="cta" href="#contact">
+            <button>Contact</button>
+        </a>
     </header>
+
     <section>
         <ul>
             <li class="list active" data-filter="All">All</li>
@@ -25,145 +30,59 @@
             <li class="list" data-filter="Action">Action</li>
         </ul>
 
-        <!--gallery start here-->
-
         <div class="product">
-            <a href="https://www.shorturl.at/azUW2">
+>
                 <div class="itemBox Cars zoom">
                     <img class="image__img" src="images\car1.jpg">
-                        <div class="image__box">
-                            <div class="image__overlay">
-                                <div class="text">
-                                    Uncompressed Download
-                                </div>
-                            </div>
-                        </div>
                 </div>
-            </a>
 
-            <a href="https://www.shorturl.at/cgsuK">
                 <div class="itemBox Cars zoom">
                     <img class="image__img" src="images\car3.jpg">
-                        <div class="image__overlay">
-                            <div class="text">
-                                Uncompressed Download
-                            </div>
-                        </div>
                 </div>
-            </a>
 
-            <a href="https://www.shorturl.at/cACIN">
                 <div class="itemBox Cars zoom">
                     <img class="image__img" src="images\car4.jpg">
-                        <div class="image__overlay">
-                            <div class="text">
-                                Uncompressed Download
-                            </div>
-                        </div>
                 </div>
-            </a>
 
-            <a href="https://www.shorturl.at/gAI48">
                 <div class="itemBox Cars image">
                     <img class="image__img" src="images\car5.jpg">
-                        <div class="image__overlay">
-                            <div class="text">
-                                Uncompressed Download
-                            </div>
-                        </div>
-                </div>
-            </a>
+                </div>    
 
-            <a href="https://www.shorturl.at/svDT1">
                 <div class="itembox__vertical Action zoom">
                     <img class="image__img" src="images\action1.jpg">
-                        <div class="image__overlay">
-                            <div class="text">
-                                Uncompressed Download
-                            </div>
-                        </div>
                 </div>
-            </a>
-            <a href="https://www.shorturl.at/npwQT">
+        
                 <div class="itembox__vertical Nature zoom">
                     <img class="image__img" src="images\nature2.jpg">
-                        <div class="image__overlay">
-                         <div class="text">
-                                    Uncompressed Download
-                                </div>
-                        </div>
-                </div>
-            </a>
-            <a href="shorturl.at/chuF4">
+                </div>         
+
                 <div class="itembox__vertical Cars zoom">
                     <img class="image__img" src="images\car6.jpg">
-                        <div class="image__overlay">
-                         <div class="text">
-                                    Uncompressed Download
-                                </div>
-                        </div>
                 </div>
-            </a>
-
-            <a href="https://www.shorturl.at/bfoFP">
-                <div class="itemBox Action zoom">
-                    <img class="image__img" src="images\action2.jpg">
-                        <div class="image__overlay">
-                            <div class="text">
-                                Uncompressed Download
-                            </div>
-                        </div>
-                </div>
-            </a>
-
-            <a href="https://www.shorturl.at/aLWZ8">
+            
                 <div class="itemBox Nature zoom">
                     <img class="image__img" src="images\nature1.jpg">
-                        <div class="image__overlay">
-                            <div class="text">
-                                Uncompressed Download
-                            </div>
-                        </div>
-                </div>
-            </a>
-
-            <a href="https://www.shorturl.at/guwEZ">
-                <div class="itemBox Action zoom">
-                    <img class="image__img" src="images\action3.jpg">
-                        <div class="image__overlay">
-                         <div class="text">
-                                    Uncompressed Download
-                                </div>
-                        </div>
-                </div>
-
-            </a>
-            
+                </div>     
         </div>
-
     </section>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-     crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             $('.list').click(function(){
                 const value = $(this).attr('data-filter');
                     if (value == 'All'){
-                        $('.itemBox, .itemBox__vertical').show('1000');
+                        $('.itemBox, .itembox__vertical').show('1000');
                     }
                     else{
-                        $('.itemBox, .itemBox__vertical').not('.'+value).hide('1000');
-                        $('.itemBox, .itemBox__vertical').filter('.'+value).show('1000');
+                        $('.itemBox, .itembox__vertical').not('.'+value).hide('1000');
+                        $('.itemBox, .itembox__vertical').filter('.'+value).show('1000');
                     }
             })
-            //moving the active class to the selected item
-
             $('.list').click(function(){
                 $(this).addClass('active').siblings().removeClass('active');
             })
-    })
+        })
     </script>
 </body>
 </html>
